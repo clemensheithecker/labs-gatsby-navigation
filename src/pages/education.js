@@ -1,10 +1,10 @@
 import React from "react"
 import LoremIpsum from "../components/LoremIpsum"
 
-export default function Home() {
+export default function Education() {
   return (
     <div>
-      <h1>Home</h1>
+      <h1>Education</h1>
       <LoremIpsum />
     </div>
   )

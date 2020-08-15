@@ -1,7 +1,7 @@
 {
   "name": "labs-gatsby-navigation",
   "private": true,
-  "description": "An extensive navigation menu build with Gatsby",
+  "description": "A navigation menu built with Gatsby including global dark mode",
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
@@ -21,9 +21,11 @@
     "gatsby": "^2.24.47",
     "gatsby-plugin-emotion": "^4.3.10",
     "gatsby-plugin-manifest": "^2.4.23",
+    "gatsby-plugin-react-helmet": "^3.3.10",
     "local-storage-fallback": "^4.1.1",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "react-helmet": "^6.1.0"
   },
   "devDependencies": {
     "prettier": "2.0.5"

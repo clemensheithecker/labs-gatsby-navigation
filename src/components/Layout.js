@@ -6,6 +6,7 @@ import { forms, page, sanitize, typography } from "emotion-sanitize"
 
 import ColorSchemeContext from "../contexts/ColorSchemeContext"
 import Navigation from "./Navigation"
+import SEO from "./SEO"
 
 const Layout = ({ children }) => {
   const { state, dispatch } = useContext(ColorSchemeContext)
@@ -23,6 +24,7 @@ const Layout = ({ children }) => {
 
   return (
     <div>
+      <SEO />
       <Global
         styles={css`
           ${sanitize}

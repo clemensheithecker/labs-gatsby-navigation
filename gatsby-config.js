@@ -1,6 +1,13 @@
 module.exports = {
+  siteMetadata: {
+    title: "Gatsby Navigation",
+    titleTemplate: "%s - Gatsby Nav",
+    description:
+      "A navigation menu built with Gatsby including global dark mode",
+    url: "https://labs.clemensheithecker.dev/gatsby-navigation",
+  },
   plugins: [
-    `gatsby-plugin-emotion`,
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -8,12 +15,13 @@ module.exports = {
         short_name: `Labs-Nav`,
         start_url: `/`,
         background_color: `#fff`,
-        theme_color: `#1C1C1E`,
+        theme_color: `#000`,
         display: `browser`,
-        icon: `src/images/logo.svg`,
-        // ToDo: Change theme_color based on color scheme
-        // theme_color_in_head: false,
+        icon: `src/images/icon.png`,
+        theme_color_in_head: false,
+        include_favicon: false,
       },
     },
+    `gatsby-plugin-emotion`,
   ],
 }

@@ -38,6 +38,7 @@ const SEO = ({ title, description }) => {
       title={seo.title}
       titleTemplate={pathname === "/" ? "" : titleTemplate}
     >
+      <meta name="robots" content="noindex" />
       <meta name="description" content={seo.description} />
       {seo.url && <meta property="og:url" content={seo.url} />}
       <link

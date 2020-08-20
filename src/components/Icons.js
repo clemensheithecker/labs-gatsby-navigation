@@ -1,5 +1,26 @@
 import React from "react"
 
+export const ArrowNarrowLeftOutline = () => (
+  <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      d="M7 16l-4-4m0 0l4-4m-4 4h18"
+    />
+  </svg>
+)
+
+export const ArrowNarrowLeftSolid = () => (
+  <svg viewBox="0 0 20 20" fill="currentColor">
+    <path
+      fillRule="evenodd"
+      d="M7.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l2.293 2.293a1 1 0 010 1.414z"
+      clipRule="evenodd"
+    />
+  </svg>
+)
+
 export const CheckCircleOutline = () => (
   <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
     <path
@@ -24,6 +45,16 @@ export const CheckCircleSolid = () => (
 export const CircleOutline = () => (
   <svg viewBox="0 0 24 24" fill="none">
     <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth={2} />
+  </svg>
+)
+
+export const ExclamationCircleOutline = () => (
+  <svg viewBox="0 0 20 20" fill="currentColor">
+    <path
+      fillRule="evenodd"
+      d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z"
+      clipRule="evenodd"
+    />
   </svg>
 )
 

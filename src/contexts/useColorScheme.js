@@ -55,13 +55,15 @@ function setDarkColorScheme() {
 }
 
 function getSystemColorScheme() {
-  // Check if browser supports matchMedia
-  if (!window.matchMedia) {
-    return false
-  }
-  // If so, determine user preference to color scheme
-  else {
-    return window.matchMedia("(prefers-color-scheme: dark)").matches
+  if (typeof window !== "undefined") {
+    // Check if browser supports matchMedia
+    if (!window.matchMedia) {
+      return false
+    }
+    // If so, determine user preference to color scheme
+    else {
+      return window.matchMedia("(prefers-color-scheme: dark)").matches
+    }
   }
 }
 

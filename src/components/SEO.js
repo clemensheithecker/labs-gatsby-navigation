@@ -18,12 +18,14 @@ const SEO = ({ title, description }) => {
   })
 
   function initialSystemColorScheme() {
-    if (window.matchMedia("(prefers-color-scheme: dark)")) {
-      return "dark"
-    } else if (window.matchMedia("(prefers-color-scheme: light)")) {
-      return "light"
-    } else {
-      return "light"
+    if (typeof window !== "undefined") {
+      if (window.matchMedia("(prefers-color-scheme: dark)")) {
+        return "dark"
+      } else if (window.matchMedia("(prefers-color-scheme: light)")) {
+        return "light"
+      } else {
+        return "light"
+      }
     }
   }
 

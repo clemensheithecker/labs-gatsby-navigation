@@ -75,6 +75,9 @@ const LightSwitch = props => {
         <NavButton
           onClick={() => setSubMenuOpen(subMenuOpen ? false : true)}
           ref={MenuRef}
+          aria-haspopup="true"
+          aria-expanded={subMenuOpen ? "true" : "false"}
+          aria-label="color scheme"
           darkColorScheme={state.darkColorScheme}
           subMenuOpen={subMenuOpen}
           css={css`

@@ -3,6 +3,7 @@ export const lightColorScheme = {
     primary1: "hsl(0, 0%, 3%)",
     primary2: "hsl(0, 0%, 57%)",
     background1: "hsl(0, 0%, 100%)",
+    background2: "hsl(0, 0%, 97%)",
     overlay: "hsla(0, 0%, 0%, 0.2)",
     focus: "hsl(220, 100%, 70%)",
     link: "hsl(220, 90%, 47%)",

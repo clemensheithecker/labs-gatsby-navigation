@@ -9,12 +9,12 @@ import {
   Nav,
   NavLogoWrapper,
   NavLinkWrapper,
-  NavLink,
   NavButtonWrapper,
   NavOverlay,
 } from "../elements/NavigationElements"
 import LightSwitch from "./LightSwitch"
 import MenuButton from "./MenuButton"
+import NavLink from "./NavLink"
 import useKey from "../hooks/useKey"
 import useBreakpoint from "../hooks/useBreakpoint"
 
@@ -44,7 +44,7 @@ const Navigation = () => {
       <Header>
         <Nav darkColorScheme={state.darkColorScheme} menuOpen={menuOpen}>
           <NavLogoWrapper>
-            <Link to="/" onClick={() => setMenuOpen(false)}>
+            <Link to="/" onClick={() => setMenuOpen(false)} lang="de">
               Clemens Heithecker
             </Link>
             <MenuButton
@@ -54,69 +54,17 @@ const Navigation = () => {
             />
           </NavLogoWrapper>
           <NavLinkWrapper menuOpen={menuOpen}>
-            <NavLink darkColorScheme={state.darkColorScheme}>
-              <Link
-                to="/contact"
-                onClick={() => setMenuOpen(false)}
-                activeStyle={{
-                  backgroundColor: `${
-                    state.darkColorScheme
-                      ? theme.dark.colors.aGray2
-                      : theme.light.colors.aGray2
-                  }`,
-                }}
-                partiallyActive={true}
-              >
-                Contact
-              </Link>
+            <NavLink to="/contact" onClick={() => setMenuOpen(false)}>
+              Contact
             </NavLink>
-            <NavLink darkColorScheme={state.darkColorScheme}>
-              <Link
-                to="/education"
-                onClick={() => setMenuOpen(false)}
-                activeStyle={{
-                  backgroundColor: `${
-                    state.darkColorScheme
-                      ? theme.dark.colors.aGray2
-                      : theme.light.colors.aGray2
-                  }`,
-                }}
-                partiallyActive={true}
-              >
-                Education
-              </Link>
+            <NavLink to="/education" onClick={() => setMenuOpen(false)}>
+              Education
             </NavLink>
-            <NavLink darkColorScheme={state.darkColorScheme}>
-              <Link
-                to="/journal"
-                onClick={() => setMenuOpen(false)}
-                activeStyle={{
-                  backgroundColor: `${
-                    state.darkColorScheme
-                      ? theme.dark.colors.aGray2
-                      : theme.light.colors.aGray2
-                  }`,
-                }}
-                partiallyActive={true}
-              >
-                Journal
-              </Link>
+            <NavLink to="/journal" onClick={() => setMenuOpen(false)}>
+              Journal
             </NavLink>
-            <NavLink darkColorScheme={state.darkColorScheme}>
-              <Link
-                to="/projects"
-                onClick={() => setMenuOpen(false)}
-                activeStyle={{
-                  backgroundColor: `${
-                    state.darkColorScheme
-                      ? theme.dark.colors.aGray2
-                      : theme.light.colors.aGray2
-                  }`,
-                }}
-                partiallyActive={true}
-              >
-                Projects
-              </Link>
+            <NavLink to="/projects" onClick={() => setMenuOpen(false)}>
+              Projects
             </NavLink>
           </NavLinkWrapper>
           <NavButtonWrapper

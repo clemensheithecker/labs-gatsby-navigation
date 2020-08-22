@@ -2,7 +2,7 @@ import React from "react"
 
 const LoremIpsum = () => {
   return (
-    <div>
+    <>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed commodo
         tellus, quis tristique quam. In massa purus, pulvinar et ultricies id,
@@ -38,32 +38,7 @@ const LoremIpsum = () => {
         luctus condimentum, leo massa venenatis erat, vel hendrerit libero
         ligula sit amet magna. Donec venenatis et nisl eget blandit.
       </p>
-      <p>
-        Nunc faucibus eleifend dolor ut porta. Phasellus non condimentum nisl,
-        at aliquet sem. Suspendisse lectus sem, volutpat at ullamcorper a,
-        elementum id elit. Donec ullamcorper velit diam, sed pharetra magna
-        vehicula in. In ultrices sed velit eu interdum. Duis tincidunt, nibh ut
-        mollis ultrices, risus nibh vehicula dui, ac vehicula velit ex at
-        turpis. Maecenas ultrices ullamcorper eleifend. Phasellus nec tristique
-        magna. Class aptent taciti sociosqu ad litora torquent per conubia
-        nostra, per inceptos himenaeos.
-      </p>
-      <p>
-        Ut vel scelerisque leo. Class aptent taciti sociosqu ad litora torquent
-        per conubia nostra, per inceptos himenaeos. Integer malesuada hendrerit
-        volutpat. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-        Nam libero enim, posuere vel nunc sed, maximus facilisis nibh. Praesent
-        nec orci rhoncus, pulvinar lectus varius, malesuada lectus. Duis sed
-        finibus sem. Pellentesque a nisi quis orci mollis congue. Sed ac lacus
-        cursus, dictum orci nec, hendrerit leo. Quisque luctus, eros sit amet
-        consequat sodales, augue odio tempor nisi, in semper dui ex vel nulla.
-        Suspendisse vitae tortor pulvinar, ultricies dolor et, egestas risus.
-        Suspendisse nunc justo, eleifend ut ligula vitae, vestibulum ultrices
-        urna. Integer vitae ex ac magna lobortis dictum vitae sed nisl. Etiam in
-        lectus vehicula, cursus lacus ut, ultricies risus. Aenean hendrerit
-        felis quis ex interdum porta.
-      </p>
-    </div>
+    </>
   )
 }
 

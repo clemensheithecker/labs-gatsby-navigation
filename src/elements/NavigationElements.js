@@ -92,7 +92,7 @@ export const NavLinkWrapper = styled.ul`
   }
 `
 
-export const NavLink = styled.li`
+export const NavLinkElement = styled.li`
   a {
     display: block;
     padding: 0.5em;

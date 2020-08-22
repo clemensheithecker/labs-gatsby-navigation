@@ -3,6 +3,7 @@ export const darkColorScheme = {
     primary1: "hsl(0, 0%, 97%)",
     primary2: "hsl(0, 0%, 53%)",
     background1: "hsl(0, 0%, 0%)",
+    background2: "hsl(0, 0%, 6%)",
     overlay: "hsla(0, 0%, 0%, 0.4)",
     focus: "hsl(220, 90%, 60%)",
     link: "hsl(220, 83%, 63%)",

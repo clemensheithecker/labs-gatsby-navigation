@@ -8,9 +8,9 @@ const useKey = (key, callback) => {
   })
 
   useEffect(() => {
-    function handle(event) {
-      if (event.key === key) {
-        callbackRef.current(event)
+    function handle(e) {
+      if (e.key === key) {
+        callbackRef.current(e)
       }
     }
 

@@ -1,31 +1,31 @@
-import React, { useContext, useEffect, useState } from "react"
-import useWhatInput from "react-use-what-input"
-
-import { Global, css } from "@emotion/core"
-import { useTheme } from "emotion-theming"
-import { forms, sanitize, typography } from "emotion-sanitize"
+import React, { useContext } from "react"
 
 import ColorSchemeContext from "../contexts/ColorSchemeContext"
+import { forms, sanitize, typography } from "emotion-sanitize"
+import { Global, css } from "@emotion/core"
+import useSystemColorScheme from "../hooks/useSystemColorScheme"
+import { useTheme } from "emotion-theming"
+import useWhatInput from "react-use-what-input"
+
+import Footer from "./Footer"
 import Navigation from "./Navigation"
 import SEO from "./SEO"
 
 const Layout = ({ children }) => {
   const { state, dispatch } = useContext(ColorSchemeContext)
-  const [systemColorScheme, setSystemColorScheme] = useState()
 
   const theme = useTheme()
   const currentInput = useWhatInput("input")
 
-  useEffect(() => {
+  function updateColorScheme() {
     dispatch({ type: "AUTO_COLOR_SCHEME" })
-  }, [dispatch, systemColorScheme])
+  }
 
-  window.matchMedia("(prefers-color-scheme: dark)").addListener(function (e) {
-    setSystemColorScheme(e.matches)
-  })
+  useSystemColorScheme("dark", updateColorScheme)
+  useSystemColorScheme("light", updateColorScheme)
 
   return (
-    <div>
+    <>
       <SEO />
       <Global
         styles={css`
@@ -35,9 +35,8 @@ const Layout = ({ children }) => {
 
           html {
             padding: 5em 1em 1em;
-            font-family: ${theme.common.fonts.main};
           }
-
+          
           @media (${theme.common.breakpoints.xLarge}) {
             html {
               padding: 5em calc(50% - ((0.5 * ${
@@ -45,6 +44,16 @@ const Layout = ({ children }) => {
               }) - 1em)) 1em;
             }
           }
+
+          html, body, #___gatsby, #gatsby-focus-wrapper {
+            height: 100%;
+          }
+
+          #gatsby-focus-wrapper {
+            display: flex;
+            flex-direction: column;
+          }
+          
 
           body {
             color: ${
@@ -59,7 +68,18 @@ const Layout = ({ children }) => {
             };
           }
 
+          main {
+            flex: 1 0 auto;
+          }
+
+          footer {
+            flex-shrink: 0;
+          }
+
           a {
+            display: inline-flex;
+            align-items: center;
+            width: auto;
             text-decoration: none;
             color: ${
               state.darkColorScheme
@@ -67,12 +87,8 @@ const Layout = ({ children }) => {
                 : theme.light.colors.link
             };
         
-            span {
-              padding: 0 0 0.2em 0;
-        
-              :hover {
-                border-bottom: 2px solid;
-              }
+            :hover {
+              text-decoration: underline;
             }
         
             svg {
@@ -95,8 +111,9 @@ const Layout = ({ children }) => {
       `}
       />
       <Navigation />
-      {children}
-    </div>
+      <main>{children}</main>
+      <Footer />
+    </>
   )
 }
 

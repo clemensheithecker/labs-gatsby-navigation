@@ -14,11 +14,9 @@ const useBreakpoint = (breakpoint, callback) => {
       }
     }
 
-    const update = () => handle()
-
-    window.addEventListener("resize", update)
+    window.addEventListener("resize", handle)
     return () => {
-      window.removeEventListener("resize", update)
+      window.removeEventListener("resize", handle)
     }
   }, [breakpoint])
 }

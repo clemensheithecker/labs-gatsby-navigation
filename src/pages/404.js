@@ -6,7 +6,7 @@ import {
   ArrowNarrowLeftOutline,
   ArrowNarrowLeftSolid,
 } from "../components/Icons"
-import { Container } from "../elements/404Elements"
+import { Container } from "../elements/commonElements"
 import SEO from "../components/SEO"
 
 export default function PageNotFound() {
@@ -17,12 +17,11 @@ export default function PageNotFound() {
       <SEO title="Page Not Found" description="Page not found" />
       <div>
         <h1>Page Not Found</h1>
-        <h2>Code 404</h2>
         <p>The page you requested cannot be found.</p>
         <Link to="/">
           {!state.darkColorScheme && <ArrowNarrowLeftOutline />}
           {state.darkColorScheme && <ArrowNarrowLeftSolid />}
-          <span>Back to Home</span>
+          Back to Home
         </Link>
       </div>
     </Container>

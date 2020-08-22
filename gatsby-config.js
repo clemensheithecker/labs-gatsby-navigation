@@ -4,8 +4,9 @@ module.exports = {
     titleTemplate: "%s - Gatsby Nav",
     description:
       "A navigation menu built with Gatsby including global dark mode",
-    url: "https://labs.clemensheithecker.dev/gatsby-navigation",
+    url: "https://clemensheithecker.dev/projects/gatsby-navigation",
   },
+  pathPrefix: `/projects/gatsby-navigation`,
   plugins: [
     `gatsby-plugin-react-helmet`,
     {

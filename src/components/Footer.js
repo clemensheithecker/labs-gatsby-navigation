@@ -10,10 +10,10 @@ const Footer = () => {
   return (
     <FooterContainer darkColorScheme={state.darkColorScheme}>
       <p>
-        This project was developed by Clemens Heithecker. For the full source
-        code, visit{" "}
+        This project was developed by Clemens Heithecker. Find the complete
+        source code on{" "}
         <a href="https://github.com/clemensheithecker/labs-gatsby-navigation">
-          github.com/clemensheithecker/labs-gatsby-navigation
+          github.com/clemensheithecker
         </a>
         .
       </p>

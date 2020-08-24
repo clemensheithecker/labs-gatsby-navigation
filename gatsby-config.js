@@ -6,8 +6,6 @@ module.exports = {
       "A navigation menu built with Gatsby including global dark mode",
     url: "https://clemensheithecker.dev/projects/gatsby-navigation",
   },
-  // A path prefix for the project to be embedded into clemensheithecker.dev.
-  pathPrefix: `/projects/gatsby-navigation`,
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
@@ -25,6 +23,5 @@ module.exports = {
       },
     },
     `gatsby-plugin-emotion`,
-    `gatsby-plugin-netlify`,
   ],
 }
